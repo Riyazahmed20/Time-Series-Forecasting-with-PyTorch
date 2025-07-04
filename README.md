@@ -1,25 +1,50 @@
 # Time-Series-Forecasting-with-PyTorch
 
-## Objective
-This project demonstrates how to build and train a time series forecasting model using PyTorch. It is intended for learners and practitioners interested in applying deep learning techniques to sequential data.
+# ⏳ Time Series Forecasting with PyTorch
 
-## Description
-Time series forecasting is a crucial task in many domains such as finance, weather prediction, and stock market analysis. This notebook showcases a step-by-step pipeline for modeling time series data using PyTorch, including data preparation, sequence generation, model definition using LSTM (Long Short-Term Memory), training, and evaluation.
+## 🎯 Objective
+To build and train a deep learning model using PyTorch for univariate time series forecasting. This project aims to demonstrate how LSTM networks can be used to predict future values based on historical sequential data.
 
-### Key Highlights:
-- Synthetic dataset generation for demonstration.
-- Custom dataset class to handle sequence data.
-- LSTM-based model architecture.
-- Training loop with loss tracking.
-- Visualization of predictions vs actual values.
+## 📄 Description
+Time series forecasting is widely used in domains like finance, energy, and climate modeling. This notebook walks through:
+- Generating or loading time series data
+- Creating input-output sequences
+- Building an LSTM-based forecasting model using PyTorch
+- Training the model and evaluating performance
+- Visualizing the prediction vs actual values
 
-## Requirements
-- Python 3.8+
-- PyTorch
-- NumPy
-- Matplotlib
-- scikit-learn
+The model predicts future time steps using past observations and learns temporal dependencies using recurrent layers (LSTM).
 
-Install dependencies:
+## 🧪 Training Loss Curve
+
+The training loop monitors and visualizes the Mean Squared Error (MSE) loss over epochs, helping to understand convergence behavior.
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(train_losses)
+plt.title("Training Loss Curve")
+plt.xlabel("Epoch")
+plt.ylabel("MSE Loss")
+plt.grid(True)
+plt.show()
+
+
+## 🚀 How to Run
+Clone Repository:
+git clone https://github.com/yourusername/Time-Series-Forecasting-with-PyTorch.git
+cd Time-Series-Forecasting-with-PyTorch
+
+### 🧰 Dependencies
+Make sure you have the following installed:
+
+- Python 3.8 or higher  
+- PyTorch  
+- NumPy  
+- Matplotlib  
+- scikit-learn  
+
+Install all dependencies using pip:
 ```bash
 pip install torch numpy matplotlib scikit-learn
+
